@@ -55,7 +55,7 @@ public class AddressEntityConfiguration : IEntityTypeConfiguration<AddressEntity
 
         builder
             .Property(x => x.CreatedAt)
-            .HasDefaultValue("getdate()")
+            .HasDefaultValue("GETDATE()")
             .ValueGeneratedOnAdd();
     }
 }
