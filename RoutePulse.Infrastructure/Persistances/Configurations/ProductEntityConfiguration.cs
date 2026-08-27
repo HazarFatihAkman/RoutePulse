@@ -18,6 +18,7 @@ public class ProductEntityConfiguration : IEntityTypeConfiguration<ProductEntity
         builder
             .Property(x => x.Price)
             .HasDefaultValue(0)
+            .HasPrecision(18, 2)
             .IsRequired();
 
         builder
@@ -34,7 +35,7 @@ public class ProductEntityConfiguration : IEntityTypeConfiguration<ProductEntity
             .ToTable("Products", table =>
             {
                 table.HasCheckConstraint(
-                    "CK_Produtcs_Price",
+                    "CK_Products_Price",
                     "[Price] >= 0"
                 );
 

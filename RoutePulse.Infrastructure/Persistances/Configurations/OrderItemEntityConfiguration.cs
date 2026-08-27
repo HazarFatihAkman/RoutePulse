@@ -5,7 +5,7 @@ using RoutePulse.Infrastructure.Persistances.Entities;
 
 namespace RoutePulse.Infrastructure.Persistances.Configurations;
 
-public class OrderItemEntityConfiguraiton : IEntityTypeConfiguration<OrderItemEntity>
+public class OrderItemEntityConfiguration : IEntityTypeConfiguration<OrderItemEntity>
 {
     public void Configure(EntityTypeBuilder<OrderItemEntity> builder)
     {
@@ -23,19 +23,19 @@ public class OrderItemEntityConfiguraiton : IEntityTypeConfiguration<OrderItemEn
 
         builder
             .Property(x => x.Quantity)
-            .HasDefaultValue(0)
+            .HasDefaultValue(1)
             .IsRequired();
 
         builder
             .ToTable("OrderItems", table =>
             {
                 table.HasCheckConstraint(
-                    "CK_OrderItem_Quantity",
-                    "[Quantity] >= 0"
+                    "CK_OrderItems_Quantity",
+                    "[Quantity] >= 1"
                 );
 
                 table.HasCheckConstraint(
-                    "CK_OrderItem_UnitPrice",
+                    "CK_OrderItems_UnitPrice",
                     "[UnitPrice] >= 0"
                 );
             });
@@ -43,6 +43,7 @@ public class OrderItemEntityConfiguraiton : IEntityTypeConfiguration<OrderItemEn
         builder
             .Property(x => x.UnitPrice)
             .HasDefaultValue(0)
+            .HasPrecision(18, 2)
             .IsRequired();
 
     }

@@ -61,6 +61,12 @@ public class OrderEntityConfiguration : IEntityTypeConfiguration<OrderEntity>
             .HasForeignKey(x => x.OrderId);
 
         builder
+            .Property(x => x.TotalAmount)
+            .HasDefaultValue(0)
+            .HasPrecision(18, 2)
+            .IsRequired();
+
+        builder
             .ToTable("Orders", table =>
             {
                 table.HasCheckConstraint(
