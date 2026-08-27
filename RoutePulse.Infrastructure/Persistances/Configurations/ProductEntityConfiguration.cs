@@ -21,7 +21,7 @@ public class ProductEntityConfiguration : IEntityTypeConfiguration<ProductEntity
             .IsRequired();
 
         builder
-            .Property(x => x.PreparingTime)
+            .Property(x => x.PreparingTimeMin)
             .HasDefaultValue(0)
             .IsRequired();
 
@@ -39,8 +39,8 @@ public class ProductEntityConfiguration : IEntityTypeConfiguration<ProductEntity
                 );
 
                 table.HasCheckConstraint(
-                    "CK_Produtcs_PreparingTime",
-                    "[PreparingTime] >= 0"
+                    "CK_Produtcs_PreparingTimeMin",
+                    "[PreparingTimeMin] >= 0"
                 );
             });
     }

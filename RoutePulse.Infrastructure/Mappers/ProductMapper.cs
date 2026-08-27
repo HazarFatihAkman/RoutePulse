@@ -11,7 +11,7 @@ public static class ProductMapper
         Id = model.Id,
         Name = model.Name,
         Price = model.Price,
-        PreparingTime = model.PreparingTime,
+        PreparingTimeMin = model.PreparingTimeMin,
         CreatedAt = model.CreatedAt
     };
 }
