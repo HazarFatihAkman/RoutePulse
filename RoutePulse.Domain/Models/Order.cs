@@ -62,6 +62,7 @@ public class Order
 
     public void MarkAsCancelled()
     {
+        if (Status == OrderStatus.Delivered) throw ValidateStatus(OrderStatus.Cancelled);
         Status = OrderStatus.Cancelled;
     }
 
