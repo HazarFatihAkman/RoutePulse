@@ -20,49 +20,50 @@ public class Order
 
     public void MarkAsCreated()
     {
-        if (Status > OrderStatus.Created) throw ValidateStatus(OrderStatus.Created);
+        if (OrderStatus.Created - Status != 1) throw ValidateStatus(OrderStatus.Created);
         Status = OrderStatus.Created;
     }
 
     public void MarkAsConfirmed()
     {
-        if (Status > OrderStatus.Confirmed) throw ValidateStatus(OrderStatus.Confirmed);
+        if (OrderStatus.Confirmed - Status != 1) throw ValidateStatus(OrderStatus.Confirmed);
         Status = OrderStatus.Confirmed;
     }
 
     public void MarkAsPreparing()
     {
-        if (Status > OrderStatus.Preparing) throw ValidateStatus(OrderStatus.Preparing);
+        if (OrderStatus.Preparing - Status != 1) throw ValidateStatus(OrderStatus.Preparing);
         Status = OrderStatus.Preparing;
     }
 
     public void MarkAsReadyForPickup()
     {
-        if (Status > OrderStatus.ReadyForPickup) throw ValidateStatus(OrderStatus.ReadyForPickup);
+        if (OrderStatus.ReadyForPickup - Status != 1) throw ValidateStatus(OrderStatus.ReadyForPickup);
         Status = OrderStatus.ReadyForPickup;
     }
 
     public void MarkAsPickedUp()
     {
-        if (Status > OrderStatus.PickedUp) throw ValidateStatus(OrderStatus.PickedUp);
+        if (OrderStatus.PickedUp - Status != 1) throw ValidateStatus(OrderStatus.PickedUp);
         Status = OrderStatus.PickedUp;
     }
 
     public void MarkAsOnTheWay()
     {
-        if (Status > OrderStatus.OnTheWay) throw ValidateStatus(OrderStatus.OnTheWay);
+        if (OrderStatus.OnTheWay - Status != 1) throw ValidateStatus(OrderStatus.OnTheWay);
         Status = OrderStatus.OnTheWay;
     }
 
     public void MarkAsDelivered()
     {
-        if (Status > OrderStatus.Delivered) throw ValidateStatus(OrderStatus.Delivered);
+        if (OrderStatus.Delivered - Status != 1) throw ValidateStatus(OrderStatus.Delivered);
         Status = OrderStatus.Delivered;
     }
 
     public void MarkAsCancelled()
     {
-        if (Status == OrderStatus.Delivered) throw ValidateStatus(OrderStatus.Cancelled);
+        //TODO: I will think about it and do later
+        // if (Status == OrderStatus.Delivered) throw ValidateStatus(OrderStatus.Cancelled);
         Status = OrderStatus.Cancelled;
     }
 
