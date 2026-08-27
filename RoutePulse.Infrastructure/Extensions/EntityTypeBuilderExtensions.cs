@@ -2,7 +2,7 @@ using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace RoutePulse.Domain.Extensions;
+namespace RoutePulse.Infrastructure.Extensions;
 
 public static class EntityTypeBuilderExtensions
 {

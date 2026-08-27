@@ -1,9 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using RoutePulse.Domain.Persistances.Entities;
-using RoutePulse.Domain.Extensions;
+using RoutePulse.Infrastructure.Extensions;
+using RoutePulse.Infrastructure.Persistances.Entities;
 
-namespace RoutePulse.Domain.Persistances.Configurations;
+namespace RoutePulse.Infrastructure.Persistances.Configurations;
 
 public class CustomerEntityConfiguration : IEntityTypeConfiguration<CustomerEntity>
 {

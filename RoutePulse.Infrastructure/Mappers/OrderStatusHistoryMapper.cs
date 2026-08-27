@@ -1,7 +1,7 @@
 using RoutePulse.Domain.Models;
-using RoutePulse.Domain.Persistances.Entities;
+using RoutePulse.Infrastructure.Persistances.Entities;
 
-namespace RoutePulse.Domain.Mappers;
+namespace RoutePulse.Infrastructure.Mappers;
 
 public static class OrderStatusHistoryMapper
 {

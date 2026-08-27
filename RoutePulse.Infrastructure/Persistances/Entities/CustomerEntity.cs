@@ -1,6 +1,6 @@
 using RoutePulse.Domain.Models;
 
-namespace RoutePulse.Domain.Persistances.Entities;
+namespace RoutePulse.Infrastructure.Persistances.Entities;
 
 public class CustomerEntity : Customer
 {
