@@ -6,7 +6,7 @@ namespace RoutePulse.Infrastructure.Extensions;
 
 public static class EntityTypeBuilderExtensions
 {
-    public static PropertyBuilder<T> MaxLen<T>(
+    public static PropertyBuilder<T> RequiredMaxLen<T>(
         this PropertyBuilder<T> property,
         int maxLen = 256
     ) => property.HasMaxLength(maxLen).IsRequired();
