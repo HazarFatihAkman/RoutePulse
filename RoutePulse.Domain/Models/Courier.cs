@@ -13,5 +13,6 @@ public class Courier
     {
         CurrentLocation = location;
         CurrentSpeed = speed;
+        LastLocationUpdate = DateTimeOffset.UtcNow;
     }
 }

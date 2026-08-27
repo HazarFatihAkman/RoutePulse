@@ -5,12 +5,13 @@ namespace RoutePulse.Domain.Mappers;
 
 public static class ProductMapper
 {
-    public static ProductEntity ToEntity(this Product model)
+    public static ProductEntity toEntity(this Product model)
     => new()
     {
         Id = model.Id,
         Name = model.Name,
         Price = model.Price,
+        PreparingTime = model.PreparingTime,
         CreatedAt = model.CreatedAt
     };
 }

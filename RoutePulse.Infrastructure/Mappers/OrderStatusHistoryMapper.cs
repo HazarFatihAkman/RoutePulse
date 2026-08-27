@@ -5,7 +5,7 @@ namespace RoutePulse.Domain.Mappers;
 
 public static class OrderStatusHistoryMapper
 {
-    public static OrderStatusHistoryEntity ToEntity(this OrderStatusHistory model)
+    public static OrderStatusHistoryEntity toEntity(this OrderStatusHistory model)
     => new()
     {
         Id = model.Id,

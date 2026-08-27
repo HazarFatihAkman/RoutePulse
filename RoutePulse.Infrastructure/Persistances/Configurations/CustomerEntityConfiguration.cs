@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using RoutePulse.Domain.Persistances.Entities;
-using RoutePulse.Domain.Extentions;
+using RoutePulse.Domain.Extensions;
 
 namespace RoutePulse.Domain.Persistances.Configurations;
 

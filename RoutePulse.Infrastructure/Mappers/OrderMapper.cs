@@ -11,7 +11,6 @@ public static class OrderMapper
         Id = model.Id,
         CustomerId = model.CustomerId,
         AddressId = model.AddressId,
-        Status = model.Status,
         PaymentMethod = model.PaymentMethod,
         PaymentStatus = model.PaymentStatus
     };

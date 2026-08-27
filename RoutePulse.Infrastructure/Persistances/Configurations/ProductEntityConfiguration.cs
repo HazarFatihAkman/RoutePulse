@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using RoutePulse.Domain.Extentions;
+using RoutePulse.Domain.Extensions;
 using RoutePulse.Domain.Persistances.Entities;
 
 namespace RoutePulse.Domain.Persistances.Configurations;
@@ -21,6 +21,11 @@ public class ProductEntityConfiguration : IEntityTypeConfiguration<ProductEntity
             .IsRequired();
 
         builder
+            .Property(x => x.PreparingTime)
+            .HasDefaultValue(0)
+            .IsRequired();
+
+        builder
             .Property(x => x.CreatedAt)
             .HasDefaultValue("getdate()")
             .ValueGeneratedOnAdd();
@@ -31,6 +36,11 @@ public class ProductEntityConfiguration : IEntityTypeConfiguration<ProductEntity
                 table.HasCheckConstraint(
                     "CK_Produtcs_Price",
                     "[Price] >= 0"
+                );
+
+                table.HasCheckConstraint(
+                    "CK_Produtcs_PreparingTime",
+                    "[PreparingTime] >= 0"
                 );
             });
     }

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoutePulse.Domain", "RouteP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoutePulse.Application", "RoutePulse.Application\RoutePulse.Application.csproj", "{39078C5B-CE4D-4E1E-A329-982DDD1A045A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoutePulse.Infrastructure", "RoutePulse.Infrastructure\RoutePulse.Infrastructure.csproj", "{735FED13-AE4E-466B-A09E-7D6F7B3AD3F9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,18 @@ Global
 		{39078C5B-CE4D-4E1E-A329-982DDD1A045A}.Release|x64.Build.0 = Release|Any CPU
 		{39078C5B-CE4D-4E1E-A329-982DDD1A045A}.Release|x86.ActiveCfg = Release|Any CPU
 		{39078C5B-CE4D-4E1E-A329-982DDD1A045A}.Release|x86.Build.0 = Release|Any CPU
+		{735FED13-AE4E-466B-A09E-7D6F7B3AD3F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{735FED13-AE4E-466B-A09E-7D6F7B3AD3F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{735FED13-AE4E-466B-A09E-7D6F7B3AD3F9}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{735FED13-AE4E-466B-A09E-7D6F7B3AD3F9}.Debug|x64.Build.0 = Debug|Any CPU
+		{735FED13-AE4E-466B-A09E-7D6F7B3AD3F9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{735FED13-AE4E-466B-A09E-7D6F7B3AD3F9}.Debug|x86.Build.0 = Debug|Any CPU
+		{735FED13-AE4E-466B-A09E-7D6F7B3AD3F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{735FED13-AE4E-466B-A09E-7D6F7B3AD3F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{735FED13-AE4E-466B-A09E-7D6F7B3AD3F9}.Release|x64.ActiveCfg = Release|Any CPU
+		{735FED13-AE4E-466B-A09E-7D6F7B3AD3F9}.Release|x64.Build.0 = Release|Any CPU
+		{735FED13-AE4E-466B-A09E-7D6F7B3AD3F9}.Release|x86.ActiveCfg = Release|Any CPU
+		{735FED13-AE4E-466B-A09E-7D6F7B3AD3F9}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
