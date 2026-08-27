@@ -30,7 +30,7 @@ public class ProductEntityConfiguration : IEntityTypeConfiguration<ProductEntity
             {
                 table.HasCheckConstraint(
                     "CK_Produtcs_Price",
-                    "[Price] => 0"
+                    "[Price] >= 0"
                 );
             });
     }

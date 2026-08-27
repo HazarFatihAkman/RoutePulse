@@ -10,7 +10,7 @@ public static class OrderStatusHistoryMapper
     {
         Id = model.Id,
         OrderId = model.OrderId,
-        CourierId = model.CourierId,
+        AssignedCourierId = model.AssignedCourierId,
         Status = model.Status,
         CreatedAt = model.CreatedAt
     };

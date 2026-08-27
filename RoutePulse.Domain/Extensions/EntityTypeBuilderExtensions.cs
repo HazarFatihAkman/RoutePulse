@@ -2,9 +2,9 @@ using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace RoutePulse.Domain.Extentions;
+namespace RoutePulse.Domain.Extensions;
 
-public static class EntityTypeBuilderExtentions
+public static class EntityTypeBuilderExtensions
 {
     public static PropertyBuilder<T> RequriedMaxLen<T>(
         this PropertyBuilder<T> property,

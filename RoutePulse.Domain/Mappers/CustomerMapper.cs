@@ -11,6 +11,6 @@ public static class CustomerMapper
         Id = model.Id,
         FullName = model.FullName,
         Email = model.Email,
-        PhoneNumber = model.PhoneNumber,
+        PhoneNumber = model.PhoneNumber
     };
 }

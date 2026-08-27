@@ -65,7 +65,7 @@ public class OrderEntityConfiguration : IEntityTypeConfiguration<OrderEntity>
             {
                 table.HasCheckConstraint(
                     "CK_Orders_TotalAmount",
-                    "[TotalAmount] => 0"
+                    "[TotalAmount] >= 0"
                 );
             });
     }

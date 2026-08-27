@@ -31,12 +31,12 @@ public class OrderItemEntityConfiguraiton : IEntityTypeConfiguration<OrderItemEn
             {
                 table.HasCheckConstraint(
                     "CK_OrderItem_Quantity",
-                    "[Quantity] => 0"
+                    "[Quantity] >= 0"
                 );
 
                 table.HasCheckConstraint(
                     "CK_OrderItem_UnitPrice",
-                    "[UnitPrice] => 0"
+                    "[UnitPrice] >= 0"
                 );
             });
 

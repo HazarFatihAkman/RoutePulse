@@ -16,6 +16,8 @@ public static class AddressMapper
         Street = model.Street,
         PostalCode = model.PostalCode,
         AddressDetail = model.AddressDetail,
-        CreatedDate = model.CreatedDate
+        Floor = model.Floor,
+        Flat = model.Flat,
+        CreatedAt = model.CreatedAt
     }; 
 }
