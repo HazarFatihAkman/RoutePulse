@@ -5,7 +5,7 @@ namespace RoutePulse.Infrastructure.Mappers;
 
 public static class ProductMapper
 {
-    public static ProductEntity toEntity(this Product model)
+    public static ProductEntity ToEntity(this Product model)
     => new()
     {
         Id = model.Id,

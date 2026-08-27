@@ -5,7 +5,7 @@ namespace RoutePulse.Infrastructure.Mappers;
 
 public static class AddressMapper
 {
-    public static AddressEntity toEntity(this Address model)
+    public static AddressEntity ToEntity(this Address model)
     => new()
     {
         Id = model.Id,

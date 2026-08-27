@@ -25,12 +25,12 @@ public class CustomerEntityConfiguration : IEntityTypeConfiguration<CustomerEnti
 
         builder
             .HasMany(x => x.Orders)
-            .WithOne()
-            .HasForeignKey(x => x.Id);
+            .WithOne(x => x.Customer)
+            .HasForeignKey(x => x.CustomerId);
 
         builder
             .HasMany(x => x.Addresses)
-            .WithOne()
-            .HasForeignKey(x => x.Id);
+            .WithOne(x => x.Customer)
+            .HasForeignKey(x => x.CustomerId);
     }
 }

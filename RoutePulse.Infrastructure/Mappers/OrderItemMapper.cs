@@ -5,7 +5,7 @@ namespace RoutePulse.Infrastructure.Mappers;
 
 public static class OrderItemMapper
 {
-    public static OrderItemEntity toEntity(this OrderItem model)
+    public static OrderItemEntity ToEntity(this OrderItem model)
     => new()
     {
         Id = model.Id,

@@ -16,9 +16,9 @@ public class CourierEntityConfiguration : IEntityTypeConfiguration<CourierEntity
             .RequriedMaxLen();
 
         builder
-            .HasOne(x => x.Orders)
-            .WithMany()
-            .HasForeignKey(x => x.Id);
+            .HasMany(x => x.Orders)
+            .WithOne(x => x.AssignedCourier)
+            .HasForeignKey(x => x.AssignedCourierId);
 
         builder
             .Property(x => x.CreatedAt)

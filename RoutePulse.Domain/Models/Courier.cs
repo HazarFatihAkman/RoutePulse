@@ -4,8 +4,8 @@ public class Courier
 {
     public Guid Id { get; set; }
     public required string FullName { get; set; }
-    public CourierLocation? CurrentLocation { get; private set; }
     public DateTime CreatedAt { get; set; }
+    public CourierLocation? CurrentLocation { get; private set; }
     public double? CurrentSpeed { get; private set; }
     public DateTimeOffset? LastLocationUpdate { get; private set; }
 

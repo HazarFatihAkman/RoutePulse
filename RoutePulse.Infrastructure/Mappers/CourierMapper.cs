@@ -5,7 +5,7 @@ namespace RoutePulse.Infrastructure.Mappers;
 
 public static class CourierMapper
 {
-    public static CourierEntity toEntity(this Courier model)
+    public static CourierEntity ToEntity(this Courier model)
     => new()
     {
         Id = model.Id,
