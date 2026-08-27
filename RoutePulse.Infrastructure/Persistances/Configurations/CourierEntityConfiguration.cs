@@ -13,7 +13,7 @@ public class CourierEntityConfiguration : IEntityTypeConfiguration<CourierEntity
 
         builder
             .Property(x => x.FullName)
-            .RequriedMaxLen();
+            .RequiredMaxLen();
 
         builder
             .HasMany(x => x.Orders)

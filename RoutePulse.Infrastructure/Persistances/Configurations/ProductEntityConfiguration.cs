@@ -13,7 +13,7 @@ public class ProductEntityConfiguration : IEntityTypeConfiguration<ProductEntity
 
         builder
             .Property(x => x.Name)
-            .RequriedMaxLen();
+            .RequiredMaxLen();
 
         builder
             .Property(x => x.Price)

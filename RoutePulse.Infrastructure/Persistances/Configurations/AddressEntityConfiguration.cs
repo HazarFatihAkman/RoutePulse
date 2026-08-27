@@ -27,31 +27,31 @@ public class AddressEntityConfiguration : IEntityTypeConfiguration<AddressEntity
 
         builder
             .Property(x => x.AddressName)
-            .RequriedMaxLen(64);
+            .RequiredMaxLen(64);
 
         builder
             .Property(x => x.Country)
-            .RequriedMaxLen(64);
+            .RequiredMaxLen(64);
 
         builder
             .Property(x => x.City)
-            .RequriedMaxLen();
+            .RequiredMaxLen();
 
         builder
             .Property(x => x.PostalCode)
-            .RequriedMaxLen(12);
+            .RequiredMaxLen(12);
 
         builder
             .Property(x => x.Floor)
-            .RequriedMaxLen(8);
+            .RequiredMaxLen(8);
 
         builder
             .Property(x => x.Flat)
-            .RequriedMaxLen(8);
+            .RequiredMaxLen(8);
 
         builder
             .Property(x => x.AddressDetail)
-            .RequriedMaxLen();
+            .RequiredMaxLen();
 
         builder
             .Property(x => x.CreatedAt)

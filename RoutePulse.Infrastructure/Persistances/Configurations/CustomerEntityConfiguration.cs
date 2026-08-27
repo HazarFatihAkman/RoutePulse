@@ -13,15 +13,15 @@ public class CustomerEntityConfiguration : IEntityTypeConfiguration<CustomerEnti
 
         builder
             .Property(x => x.FullName)
-            .RequriedMaxLen();
+            .RequiredMaxLen();
 
         builder
             .Property(x => x.Email)
-            .RequriedMaxLen();
+            .RequiredMaxLen();
 
         builder
             .Property(x => x.PhoneNumber)
-            .RequriedMaxLen();
+            .RequiredMaxLen();
 
         builder
             .HasMany(x => x.Orders)
