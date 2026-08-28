@@ -35,7 +35,7 @@ public class ApplicationDbContext : DbContext, IApplicationDbContext
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "An error occured while async saving changes at {Time}", DateTime.UtcNow);
+            _logger.LogError(ex, "An error occurred while async saving changes at {Time}", DateTime.UtcNow);
             throw;
         }
     }
@@ -48,7 +48,7 @@ public class ApplicationDbContext : DbContext, IApplicationDbContext
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "An error occured while saving changes at {Time}", DateTime.UtcNow);
+            _logger.LogError(ex, "An error occurred while saving changes at {Time}", DateTime.UtcNow);
             throw;
         }
     }
