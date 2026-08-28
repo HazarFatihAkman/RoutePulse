@@ -28,7 +28,7 @@ public class ProductEntityConfiguration : IEntityTypeConfiguration<ProductEntity
 
         builder
             .Property(x => x.CreatedAt)
-            .HasDefaultValue("GETDATE()")
+            .HasDefaultValueSql("GETDATE()")
             .ValueGeneratedOnAdd();
 
         builder

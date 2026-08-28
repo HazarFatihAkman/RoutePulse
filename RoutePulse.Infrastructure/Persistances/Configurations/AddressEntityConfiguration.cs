@@ -55,7 +55,12 @@ public class AddressEntityConfiguration : IEntityTypeConfiguration<AddressEntity
 
         builder
             .Property(x => x.CreatedAt)
-            .HasDefaultValue("GETDATE()")
+            .HasDefaultValueSql("GETDATE()")
             .ValueGeneratedOnAdd();
+    }
+
+    internal void Configure(Func<EntityTypeBuilder<AddressEntity>> entity)
+    {
+        throw new NotImplementedException();
     }
 }

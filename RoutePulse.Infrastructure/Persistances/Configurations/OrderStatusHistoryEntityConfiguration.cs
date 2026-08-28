@@ -28,7 +28,7 @@ public class OrderStatusHistoryEntityConfiguration : IEntityTypeConfiguration<Or
 
         builder
             .Property(x => x.CreatedAt)
-            .HasDefaultValue("GETDATE()")
+            .HasDefaultValueSql("GETDATE()")
             .ValueGeneratedOnAdd();
 
         builder

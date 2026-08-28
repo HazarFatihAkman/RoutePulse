@@ -22,7 +22,7 @@ public class CourierEntityConfiguration : IEntityTypeConfiguration<CourierEntity
 
         builder
             .Property(x => x.CreatedAt)
-            .HasDefaultValue("GETDATE()")
+            .HasDefaultValueSql("GETDATE()")
             .ValueGeneratedOnAdd();
     }
 }

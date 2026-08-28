@@ -18,12 +18,6 @@ public class Order
         TotalAmount = items.Sum(x => x.Total);
     }
 
-    public void MarkAsCreated()
-    {
-        if (OrderStatus.Created - Status != 1) throw ValidateStatus(OrderStatus.Created);
-        Status = OrderStatus.Created;
-    }
-
     public void MarkAsConfirmed()
     {
         if (OrderStatus.Confirmed - Status != 1) throw ValidateStatus(OrderStatus.Confirmed);
