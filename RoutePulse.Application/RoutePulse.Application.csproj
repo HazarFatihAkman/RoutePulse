@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="../RoutePulse.Infrastructure/RoutePulse.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

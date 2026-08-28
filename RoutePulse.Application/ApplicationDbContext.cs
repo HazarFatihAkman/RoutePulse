@@ -1,10 +1,17 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using RoutePulse.Infrastructure.Persistances.Entities;
 
 namespace RoutePulse.Infrastructure;
 
-public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : DbContext(options), IApplicationDbContext
+public class ApplicationDbContext : DbContext, IApplicationDbContext
 {
+    private readonly ILogger<ApplicationDbContext> _logger;
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options, ILogger<ApplicationDbContext> logger) : base(options)
+    {
+        _logger = logger;
+    }
+
     public DbSet<AddressEntity> Addresses => Set<AddressEntity>();
     public DbSet<CourierEntity> Couriers => Set<CourierEntity>();
     public DbSet<CustomerEntity> Customers => Set<CustomerEntity>();
@@ -27,8 +34,8 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
         }
         catch (Exception ex)
         {
-            Console.WriteLine(ex.Message);
-            return 0;
+            _logger.LogError(ex, "An error occured while async saving changes at {Time}", DateTime.UtcNow);
+            throw;
         }
     }
 
@@ -40,8 +47,8 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
         }
         catch (Exception ex)
         {
-            Console.WriteLine(ex.Message);
-            return 0;
+            _logger.LogError(ex, "An error occured while saving changes at {Time}", DateTime.UtcNow);
+            throw;
         }
     }
 }
