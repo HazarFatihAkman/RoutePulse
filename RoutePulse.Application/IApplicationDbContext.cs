@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using RoutePulse.Infrastructure.Persistances.Entities;
 
-namespace RoutePulse.Infrastructure;
+namespace RoutePulse.Application;
 
 public interface IApplicationDbContext
 {

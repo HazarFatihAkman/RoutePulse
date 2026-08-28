@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using RoutePulse.Domain.Enums;
 using RoutePulse.Infrastructure.Extensions;
 using RoutePulse.Infrastructure.Persistances.Entities;
 
@@ -23,7 +24,7 @@ public class OrderStatusHistoryEntityConfiguration : IEntityTypeConfiguration<Or
 
         builder
             .Property(x => x.Status)
-            .HasDefaultValue(0)
+            .HasDefaultValue(OrderStatus.Created)
             .IsRequired();
 
         builder

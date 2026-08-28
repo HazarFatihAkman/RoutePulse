@@ -8,9 +8,9 @@ public class Order
     public Guid CustomerId { get; set; }
     public Guid AddressId { get; set; }
     public Guid? AssignedCourierId { get; set; }
-    public OrderStatus Status { get; private set; }
     public PaymentMethod PaymentMethod { get; set; }
     public PaymentStatus PaymentStatus { get; set; } = PaymentStatus.Pending;
+    public OrderStatus Status { get; private set; }
     public decimal TotalAmount { get; private set; }
 
     public void SetTotalAmount(IEnumerable<OrderItem> items)

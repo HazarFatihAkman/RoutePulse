@@ -24,5 +24,16 @@ public class CourierEntityConfiguration : IEntityTypeConfiguration<CourierEntity
             .Property(x => x.CreatedAt)
             .HasDefaultValueSql("GETDATE()")
             .ValueGeneratedOnAdd();
+
+        builder
+            .ComplexProperty(x => x.CurrentLocation);
+
+        builder
+            .Property(x => x.CurrentSpeed)
+            .IsRequired(false);
+
+        builder
+            .Property(x => x.LastLocationUpdate)
+            .IsRequired(false);
     }
 }

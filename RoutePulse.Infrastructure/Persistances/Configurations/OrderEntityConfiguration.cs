@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using RoutePulse.Domain.Enums;
 using RoutePulse.Infrastructure.Extensions;
 using RoutePulse.Infrastructure.Persistances.Entities;
 
@@ -28,7 +29,7 @@ public class OrderEntityConfiguration : IEntityTypeConfiguration<OrderEntity>
 
         builder
             .Property(x => x.Status)
-            .HasDefaultValue(0)
+            .HasDefaultValue(OrderStatus.Created)
             .IsRequired();
 
         builder
@@ -37,7 +38,7 @@ public class OrderEntityConfiguration : IEntityTypeConfiguration<OrderEntity>
 
         builder
             .Property(x => x.PaymentStatus)
-            .HasDefaultValue(0)
+            .HasDefaultValue(PaymentStatus.Pending)
             .IsRequired();
 
         builder
@@ -72,6 +73,11 @@ public class OrderEntityConfiguration : IEntityTypeConfiguration<OrderEntity>
                 table.HasCheckConstraint(
                     "CK_Orders_TotalAmount",
                     "[TotalAmount] >= 0"
+                );
+
+                table.HasCheckConstraint(
+                    "CK_Orders_Status",
+                    "[Status] >= 0"
                 );
             });
     }
